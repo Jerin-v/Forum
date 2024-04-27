@@ -27,7 +27,24 @@ const CreatePost = () => {
 
     return (
         <div>
+            <form>
+                <label for="title">Title</label> <br />
+                <input type="text" id="title" name="title" onChange={handleChange} /><br />
+                <br/>
+
+                <label for="author">Author</label><br />
+                <input type="text" id="author" name="author" onChange={handleChange} /><br />
+                <br/>
+
+                <label for="content">Content</label><br />
+                <textarea rows="5" cols="50" id="content" name="content" onChange={handleChange}>
+                </textarea>
+                <br/>
+                <input type="submit" value="Submit" onClick={createPost} />
+            </form>
 
         </div>
     )
 }
+
+export default CreatePost;
