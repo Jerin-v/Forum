@@ -3,6 +3,7 @@ import './App.css'
 import { Link, useRoutes} from 'react-router-dom'
 import ReadPost from './pages/ReadPost'
 import CreatePost from './pages/CreatePost'
+import ViewPost from './pages/ViewPost'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,10 @@ function App() {
     {
       path: "/new",
       element: <CreatePost/>
+    }, 
+    {
+      path: "/post/:id",
+      element: <ViewPost/>
     }
   ])
 
