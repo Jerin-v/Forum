@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Link, useRoutes} from 'react-router-dom'
 import ReadPost from './pages/ReadPost'
+import CreatePost from './pages/CreatePost'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +11,10 @@ function App() {
     {
       path: "/",
       element: <ReadPost/>    
+    }, 
+    {
+      path: "/new",
+      element: <CreatePost/>
     }
   ])
 
