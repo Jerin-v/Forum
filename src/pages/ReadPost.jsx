@@ -21,7 +21,7 @@ const ReadPost = () => {
             {
                 posts && posts.length > 0 ?
                 posts.map((post,index) => 
-                    <Card id={post.id} title={post.title} key={index}/>
+                    <Card id={post.id} created_at={post.created_at} title={post.title} author={post.author} key={index}/>
                 ) : <h2>{'No Posts to see yet! :( '}</h2>
             }
         </div>
